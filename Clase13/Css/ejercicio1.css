@@ -1,0 +1,16 @@
+.caja{
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;  
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 20px 10px rgb(0, 110, 255) inset;
+    background-color: rgb(192, 221, 255);
+    border: 2px solid  green;
+}
+.titulo{
+    text-align: center;
+text-shadow: 3px 3px 5px rgb(0, 255, 221),
+             6px 6px 5px #0f0,
+             9px 9px 5px #00f;
+}
