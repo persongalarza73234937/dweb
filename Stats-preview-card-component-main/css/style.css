@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  --Very_dark_blue: hsl(233, 47%, 7%);
+  --Dark_desaturated_blue: hsl(244, 38%, 16%);
+  --Soft_violet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Slightly_white: hsla(0, 0%, 100%, 0.75);
+  --Slightly_transparent_white:hsla(0, 0%, 100%, 0.6);
+  --inter: "Inter", sans-serif;
+  --Lexend_Deca: "Lexend Deca", sans-serif;
+}
+
+html {
+  transition: 0.6s ease-in-out;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Very_dark_blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32rem;
+  min-height: 100vh;
+}
+
+.conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+.conteiner .card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--Dark_desaturated_blue);
+  width: 90%;
+  border-radius: 0.9rem;
+}
+.conteiner .card-boximg {
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  height: 24rem;
+  background-image: url(../images/image-header-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(38%) sepia(80%) hue-rotate(237deg) saturate(480%);
+}
+.conteiner .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.3em 2rem 1.5rem 2rem;
+}
+.conteiner .card-body-title, .conteiner .card-body-paragraph {
+  min-width: 24rem;
+  text-align: center;
+  font-family: var(--inter);
+}
+.conteiner .card-body-title {
+  color: var(--White);
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.conteiner .card-body-title-span {
+  color: var(--Soft_violet);
+}
+.conteiner .card-body-paragraph {
+  padding: 0 2.3rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.01rem;
+  margin-top: 1.7rem;
+  font-size: 1.18rem;
+  font-weight: 400;
+  color: var(--Slightly_transparent_white);
+}
+.conteiner .card-body-box {
+  margin-top: 3.5rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  transition: 0.6s ease-in-out;
+}
+.conteiner .card-body-box-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.conteiner .card-body-box-a-num {
+  color: var(--White);
+  font-size: 2rem;
+  font-family: var(--inter);
+  font-weight: 700;
+}
+.conteiner .card-body-box-a-text {
+  font-family: var(--Lexend_Deca);
+  font-weight: 400;
+  padding-top: 0.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.12rem;
+  color: var(--Slightly_transparent_white);
+}
+
+@media (min-width: 376px) {
+  html {
+    font-size: 65%;
+  }
+}
+@media (min-width: 426px) {
+  html {
+    font-size: 70%;
+  }
+  .conteiner .card-boximg {
+    background-position: left;
+    background-image: url(../images/image-header-desktop.jpg);
+  }
+  .conteiner .card-body {
+    padding-bottom: 3.5rem;
+  }
+  .conteiner .card-body-title, .conteiner .card-body-paragraph {
+    max-width: 38rem;
+  }
+  .conteiner .card-body-box {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .conteiner .card-body-box-a {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .conteiner {
+    width: 100%;
+  }
+  .conteiner .card {
+    max-width: 66rem;
+    flex-direction: row-reverse;
+  }
+  .conteiner .card-boximg {
+    width: 50%;
+    height: unset;
+  }
+  .conteiner .card-body {
+    align-items: flex-start;
+    width: 50%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 4.5rem;
+  }
+  .conteiner .card-body-title, .conteiner .card-body-paragraph {
+    max-width: 30rem;
+    text-align: start;
+  }
+  .conteiner .card-body-title {
+    text-align: start;
+  }
+  .conteiner .card-body-paragraph {
+    padding: 0;
+  }
+  .conteiner .card-body-box {
+    gap: 3rem;
+  }
+  .conteiner .card-body-box-a-num, .conteiner .card-body-box-a-text {
+    align-self: flex-start;
+  }
+  .conteiner .card-body-box-a-num {
+    font-size: 1.9rem;
+    letter-spacing: 0.1rem;
+  }
+  .conteiner .card-body-box-a-text {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+  .conteiner .card {
+    max-width: unset;
+    width: 76rem;
+  }
+  .conteiner .card-body {
+    padding-left: 4.5rem;
+    padding-right: 5rem;
+    padding-bottom: 4rem;
+  }
+  .conteiner .card-body-paragraph {
+    max-width: 26rem;
+    font-size: 1.05rem;
+  }
+  .conteiner .card-body-box {
+    margin-top: 4rem;
+  }
+  .conteiner .card-body-box-a-num {
+    font-size: 1.66rem;
+  }
+  .conteiner .card-body-box-a-text {
+    font-size: 0.78 rem;
+  }
+}/*# sourceMappingURL=style.css.map */
